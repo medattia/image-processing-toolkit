@@ -1,0 +1,125 @@
+\documentclass[12pt,a4paper,notitlepage]{report}
+%\usepackage[showframe=false]{geometry}
+%\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+%\usepackage{kpfonts}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+%\usepackage{listings}
+\usepackage[showframe=false,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm]{geometry}
+%\usepackage[T1]{fontenc}
+
+%\lstset{
+%  basicstyle=\ttfamily,
+%  mathescape
+%}
+\begin{document}
+\begin{Large}
+\textbf{Mohamed Attia}\\
+\indent\textbf{Bacar Said}\\
+
+M2-MMSI
+\end{Large}
+
+\begin{center}
+\begin{huge}
+\vspace{6cm}
+\textbf{Compte rendu des TP}\\
+\vspace{1cm}
+
+Introduction au traitement d'images
+\end{huge}
+
+\begin{LARGE}
+
+\vspace{0.5cm} MA0944
+\end{LARGE}
+
+\vspace{8cm}
+\begin{large}
+15 Février 2018
+
+\end{large}
+\end{center}
+
+\newpage
+Le but de ce travail est de programmer quelque méthode de traitement d’image sur le logiciel Matlab/Octave. Ainsi nous avons programmer un certain nombre de fonctions qu’on a classé sur deux dossiers différents. (Tous nos fichier Matlab ‘*.m ‘ sont à utiliser comme des script).
+\\
+Les codes qu’on a créés ici consiste à prendre une image et faire varier le(s) niveau(x) celons des formules bien précis existant.
+Voici les noms de différents fonction programmer sur Matlab
+	\includegraphics[scale=0.4]{test.png}
+
+\begin{itemize}
+	\item RGBTOGRAY1, RGBTOGRAY2, RGBTOGRAY3\\
+	\includegraphics[scale=0.35]{1.png} 
+\includegraphics[scale=0.35]{2.png}
+\includegraphics[scale=0.34]{3.png}
+	\item RGBTOYIQ, YIQTORGB\\
+	\begin{center}
+		\includegraphics[scale=0.35]{4.png} 
+		\includegraphics[scale=0.35]{5.png}
+	\end{center}
+	\item RGBTOYUV, YUVTORGB
+	\begin{center}
+		\includegraphics[scale=0.35]{6.png} 
+		\includegraphics[scale=0.4]{7.png}
+	\end{center}
+	\item RGBTOHSV, HSVTORGB
+	\begin{center}
+		\includegraphics[scale=0.35]{8.png} 
+		\includegraphics[scale=0.4]{9.png}
+	\end{center}
+	\item RGBTOI1I2I3, I1I2I3TORGB
+	\begin{center}
+		\includegraphics[scale=0.35]{10.png} 
+		\includegraphics[scale=0.35]{11.png}
+	\end{center}
+	\item RGBTONRGB1, RGBTONRGB2
+	\begin{center}
+		\includegraphics[scale=0.35]{12.png} 
+		\includegraphics[scale=0.35]{13.png}
+	\end{center}
+	\item Histogramme
+	\begin{center}
+		\includegraphics[scale=0.35]{14.png} 
+	\end{center}
+	\item ImageIndexe,
+	\item Histo3D
+\end{itemize}
+
+\subsection*{Seuillage:}
+Le dossier seuillage contient plusieurs scriptes qui prend une image (noir en blanc ou image couleur) puis il la binarise où fait une segmentation à partir d’une seuille donnée pas l’utilisateur.
+\begin{itemize}
+	\item SeilManuel\\
+		\begin{center}
+	\includegraphics[scale=0.35]{manuel.png} \\
+	Seuil=100
+		\end{center}
+	\item Seuilauto
+	\item Seuillagemoy
+		\begin{center}
+	\includegraphics[scale=0.35]{moyenne.png} \\
+		\end{center}
+	\item seuillegemed
+			\begin{center}
+	\includegraphics[scale=0.35]{mediane.png} \\
+		\end{center}
+	\item Otsou1, Otsou2,
+	\begin{center}
+		\includegraphics[scale=0.35]{otsu.png} 
+		\includegraphics[scale=0.4]{7.png}
+	\end{center}
+	\item isodata
+	\item Berson
+	\item Nilback
+	\item Sauvola
+\end{itemize}
+
+\subsection*{Validation des scripts:}
+
+\subsection*{Conclusion:}
+Ce TP nous a permis d’acquérir des nombreuse fonction de transformation d’image. 
+
+
+\end{document}

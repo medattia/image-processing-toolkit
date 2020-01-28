@@ -1,0 +1,73 @@
+
+
+
+
+La transformation I1I2I3
+	La représentation I1I2I3 était comparée avec espaces de couleurs (RGB,YIQ,HSI,Nrgb,CIE,XYZ,CIE (L*u*v),CIE (L*a*b))
+	Elle a donné de meilleur résultats pour une tâche de segmentation
+		I1=(R+G+B)/3
+		I2=(R-B)/2
+		I3=(2*G-R-B)/4
+RGBtoYIQ
+YIQtoRGB
+RGBtoYUV
+YUVtoRGB
+RGBtoI1I2I3
+
+
+
+www.rapidtables.com/convert/rgbtobinary rgb-->cmyk
+
+Naturlized RGB
+	r=R/(R+G+B)
+	g=G/(R+G+B)
+	b=B/(R+G+B)
+
+Sachant que r+g+b=1, on peut utiliser juste deux valeurs: où :
+		Y=c1*R+c2*G+c3*B // c1+c2+c3=1
+		T1=R/(R+G+B)
+		T2=G/(R+G+B)
+
+Faire RGBtoNRGB1 et RGBtoNRBG2
+
+
+
+Faire l'histogramme:
+[2|2|3|255|1|240|||||||||||||||||||
+|31||||||||||||||||||||||||||||||||
+|||0|||||||1|||||||||||||||||||...]
+
+A partir de l'image on va faire le tableau d'occurence des différentes valeurs
+[]  []  []
+R   G   B
+hR  hG  hB
+
+
+h=[8|3|2|1|0|............|1]
+   0 1 2 3 4			  255
+
+On fait l'indexation: dans repére orthonormé direct d'axes R,G et B, on subdivise les intervalles [0,255] sur chaque axe par n, on obtient alors
+n^3 cubes qu'on numérote de 0 à n^3-1 et on fait de façon à classé chaque valeur d'un pixel dans un cube. Au lieu d'avoir des coordonnée pour chaque pixel on lui associe seulement un numéro qui désigne le cube où il appartient.
+
+indexé en (x,y,z) ===>cube i :quantification
+	*Programme pour calculer l'histogramme d'un image
+	*Programme pour calculer l'histogramme normalisé
+	*Programme pour convertir une image RGB en image indexée
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
