@@ -21,6 +21,20 @@ im_hsv=rgb2hsv(im)
 H_Hue=histo(image_hsv(:,:,1),360)
 
 end
+% descripteur H3C : deuxième descripteur
+function H3C=histoRGB(im)
+
+HR=histo(im(:,:,1),256)
+HG=histo(im(:,:,2),256)
+HB=histo(im(:,:,3),256)
+H3C=[HR HG HB] %il faut avoir un seul vecteur par concaténation
+
+% descripteur rgb indexe : troisième descripteur
+function HRGB=histoIndexeRGB(im,QR,QG,QB)
+im_indexe=QNRGB(im,QR,QG,QB)
+HRGB=histo(im_indexe,QR*QG*QB)
+
+end
 
 
 % Descripteur H3C : deuxième descripteur
